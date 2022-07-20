@@ -23,3 +23,10 @@ def signup(request):
     else:
         form = UserForm()
     return render(request, 'common/signup.html', {'form': form})
+
+# 페이지 못찾을 때의 표시
+def page_not_found(request, exception):
+    """
+    404 page not found
+    """
+    return render(request, 'common/404.html', {})
